@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Trần Phương Nhật Phi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            background: #fff7ea;
+            color: #2b2b2b;
+        }
+
+        .trai {
+            width: 38%;
+            min-height: 100vh;
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px;
+            background: #ff7b54;
+            color: white;
+            overflow: hidden;
+        }
+        .trai::before, .trai::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .trai::before {
+            width: 260px;
+            height: 260px;
+            top: -90px;
+            left: -90px;
+        }
+        .trai::after {
+            width: 200px;
+            height: 200px;
+            bottom: -70px;
+            right: -60px;
+            background: rgba(255, 210, 63, 0.35);
+        }
+        .trai > * {
+            position: relative;
+            z-index: 1;
+        }
+        .anh {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 6px solid white;
+            background: #ffd23f;
+            color: #ff7b54;
+            font-size: 46px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 26px;
+        }
+        .anh img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .trai h1 {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+        .trai .nganh {
+            margin-top: 10px;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        .trai .mssv {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 5px 16px;
+            background: white;
+            color: #ff7b54;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .trai .links {
+            margin-top: 28px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .trai .links a {
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+        .trai .links a:hover {
+            background: white;
+            color: #ff7b54;
+        }
+
+        .phai {
+            width: 62%;
+            padding: 60px 50px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .phai h2 {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ff7b54;
+            margin-bottom: 8px;
+        }
+        .phai .tieude {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .hang {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 22px 26px;
+            margin-bottom: 18px;
+            background: white;
+            border: 3px solid #2b2b2b;
+            border-radius: 14px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 6px 6px 0 var(--mau);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hang:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0 var(--mau);
+        }
+        .hang .icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: var(--mau);
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hang .chu {
+            flex: 1;
+        }
+        .hang h3 {
+            font-size: 21px;
+        }
+        .hang p {
+            font-size: 14.5px;
+            color: #666;
+            margin-top: 2px;
+        }
+        .hang .mui {
+            font-size: 26px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .hang:hover .mui {
+            transform: translateX(6px);
+        }
+
+        .h1 { --mau: #ffd23f; }
+        .h2 { --mau: #6ec9a8; }
+        .h3 { --mau: #7fb7ff; }
+
+        footer {
+            margin-top: auto;
+            padding-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                flex-direction: column;
+            }
+            .trai, .phai {
+                width: 100%;
+            }
+            .trai {
+                position: static;
+                min-height: auto;
+                padding: 40px 20px;
+            }
+            .phai {
+                padding: 36px 20px 30px;
+            }
+            .phai .tieude {
+                font-size: 26px;
+            }
+            .hang {
+                padding: 16px;
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="trai">
+        <div class="anh">
+            TA
+            <img src="CV%20ca%20nhan/anh%20dai%20dien.jpg" alt="Trần Phương Nhật Phi" onerror="this.remove()">
+        </div>
+        <h1>Trần Phương Nhật Phi</h1>
+        <p class="nganh">Sinh viên Công nghệ Thông tin<br>ĐH Sư phạm TP.HCM</p>
+        <span class="mssv">MSSV: 52.01.104.077</span> 
+    </aside>
+
+    <main class="phai">
+        <h2>Bài thực hành</h2>
+        <p class="tieude">Chọn một trang để xem</p>
+
+        <a class="hang h1" href="CV%20ca%20nhan/cvcanhan.html">
+            <div class="icon">👤</div>
+            <div class="chu">
+                <h3>CV cá nhân</h3>
+                <p>Giới thiệu, kỹ năng, thời khóa biểu và dự án học tập.</p>
+            </div>
+            <span class="mui">→</span>
+        </a>
+
+        <a class="hang h2" href="Hang%20hoa/Hanghoa.html">
+            <div class="icon">🛒</div>
+            <div class="chu">
+                <h3>Hàng hóa</h3>
+                <p>Trang bán hàng với danh sách sản phẩm và giỏ hàng.</p>
+            </div>
+            <span class="mui">→</span>
+        </a>
+
+        <a class="hang h3" href="Ho%20ca/hoca.html">
+            <div class="icon">🐠</div>
+            <div class="chu">
+                <h3>Hồ cá</h3>
+                <p>Cảnh hồ cá về đêm.</p>
+            </div>
+            <span class="mui">→</span>
+        </a>
+
+        <footer>&copy; 2026 Bản quyền thuộc về Trần Phương Nhật Phi</footer>
+    </main>
+
+</body>
+</html>

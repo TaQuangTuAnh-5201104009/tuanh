@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Trần Phương Nhật Phi</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            background: linear-gradient(135deg, #e0f4f4, #e8eefc);
+            color: #333;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .cv {
+            max-width: 740px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .dau {
+            background: linear-gradient(135deg, teal, royalblue);
+            color: white;
+            text-align: center;
+            padding: 36px 20px 30px;
+        }
+        .anh {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: salmon;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .anh img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .dau h1 {
+            margin: 0;
+            font-size: 30px;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+        }
+        .dau p {
+            margin: 6px 0 0;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .noidung {
+            padding: 10px 40px 36px;
+        }
+
+        h2 {
+            margin: 28px 0 10px;
+            padding: 4px 0 4px 12px;
+            border-left: 5px solid var(--mau);
+            font-size: 18px;
+            color: var(--mau);
+        }
+        .m1 { --mau: teal; }
+        .m2 { --mau: royalblue; }
+        .m3 { --mau: #e76f51; }
+        .m4 { --mau: #8e5cc9; }
+        .m5 { --mau: #d9822b; }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        a {
+            color: royalblue;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #e76f51;
+        }
+
+        .the {
+            display: inline-block;
+            padding: 4px 14px;
+            margin: 4px 6px 4px 0;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+        .t1 { background: teal; }
+        .t2 { background: royalblue; }
+        .t3 { background: #e76f51; }
+        .t4 { background: #8e5cc9; }
+        .t5 { background: #d9822b; }
+
+        .cuon {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #e3e3e3;
+            padding: 9px 10px;
+            text-align: center;
+        }
+        th {
+            background: teal;
+            color: white;
+        }
+        td:first-child {
+            background: #e0f4f4;
+            color: teal;
+            font-weight: bold;
+        }
+        td.mon {
+            background: #eef1fd;
+        }
+        tr:nth-child(even) td.mon {
+            background: #fdeee9;
+        }
+
+        footer {
+            background: #2f4f4f;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 560px) {
+            .noidung {
+                padding: 10px 20px 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv">
+        <div class="dau">
+            <div class="anh">
+                <img src="anh dai dien.jpg" alt="Trần Phương Nhật Phi" onerror="this.remove()">
+                LP
+            </div>
+            <h1>Trần Phương Nhật Phi</h1>
+            <p>Sinh viên Công nghệ Thông tin - ĐH Sư phạm TP.HCM</p>
+        </div>
+
+        <div class="noidung">
+            <h2 class="m1">Giới thiệu</h2>
+            <p>Mình là sinh viên năm nhất ngành Công nghệ Thông tin, yêu thích lập trình và xây dựng trang web. Mình đang học C++, HTML, CSS, JavaScript và luôn tìm hiểu thêm công nghệ mới.</p>
+
+            <h2 class="m2">Thông tin liên hệ</h2>
+            <ul>
+                <li>Ngày sinh: 17/02/2008</li>
+                <li>Email: <a href="mailto:tranphuongnhatphi1802@gmail.com">tranphuongnhatphi1802@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/share/1FEGv3Lkk5/" target="_blank">Facebook</a></li>
+                <li><a href="https://github.com/TaQuangTuAnh-5201104009" target="_blank">GitHub</a></li>
+            </ul>
+
+            <h2 class="m3">Kỹ năng</h2>
+            <div>
+                <span class="the t1">C++</span>
+                <span class="the t3">HTML</span>
+                <span class="the t2">CSS</span>
+                <span class="the t5">JavaScript</span>
+                <span class="the t4">Bootstrap</span>
+                <span class="the t1">Git / GitHub</span>
+            </div>
+            <div>
+                <span class="the t2">Tư duy logic</span>
+                <span class="the t3">Tự học</span>
+                <span class="the t4">Làm việc nhóm</span>
+                <span class="the t5">Quản lý thời gian</span>
+            </div>
+
+            <h2 class="m4">Sở thích</h2>
+            <div>
+                <span class="the t4">📖Đọc sách </span>
+                <span class="the t2">💻 Lập trình</span>
+                <span class="the t3">🎧 Nghe nhạc</span>
+            </div>
+
+            <h2 class="m5">Thời khóa biểu</h2>
+            <div class="cuon">
+                <table>
+                    <tr><th>Thứ</th><th>Môn 1</th><th>Môn 2</th></tr>
+                    <tr><td>Thứ 2</td><td class="mon">Thiết kế website</td><td class="mon">Lập trình cơ bản</td></tr>
+                    <tr><td>Thứ 3</td><td class="mon">Triết học Mác-Lênin</td><td class="mon">Cơ sở toán trong CNTT</td></tr>
+                    <tr><td>Thứ 4</td><td class="mon" colspan="2">Lập trình cơ bản</td></tr>
+                    <tr><td>Thứ 5</td><td class="mon">Cơ sở toán trong CNTT</td><td class="mon">Toán rời rạc</td></tr>
+                    <tr><td>Thứ 6</td><td class="mon" colspan="2">Giáo dục thể chất</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <footer>&copy; 2026 Bản quyền thuộc về Trần Phương Nhật Phi</footer>
+    </div>
+</body>
+</html>
